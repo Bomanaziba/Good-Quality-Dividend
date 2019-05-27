@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoodQualityDividend.Interfaces;
+using GoodQualityDividend.Model;
+using GoodQualityDividend.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +29,9 @@ namespace GoodQualityDividend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<IStock, Stock>();
+            services.AddScoped<IDividendCriteria, DividendCriteria>();
+            services.AddScoped<IDividendQualityCriteria, DividendQualityCriteria>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
