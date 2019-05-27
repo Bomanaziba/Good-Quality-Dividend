@@ -1,0 +1,14 @@
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\bin\Debug\netcoreapp2.1\GoodQualityDividend.deps.json
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\bin\Debug\netcoreapp2.1\GoodQualityDividend.runtimeconfig.json
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\bin\Debug\netcoreapp2.1\GoodQualityDividend.runtimeconfig.dev.json
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\bin\Debug\netcoreapp2.1\GoodQualityDividend.dll
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\bin\Debug\netcoreapp2.1\GoodQualityDividend.pdb
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.csprojAssemblyReference.cache
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.csproj.CoreCompileInputs.cache
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.RazorAssemblyInfo.cache
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.RazorAssemblyInfo.cs
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.AssemblyInfoInputs.cache
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.AssemblyInfo.cs
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.RazorTargetAssemblyInfo.cache
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.dll
+C:\Users\Automata\GoodQualityDividend\GoodQualityDividend\obj\Debug\netcoreapp2.1\GoodQualityDividend.pdb
