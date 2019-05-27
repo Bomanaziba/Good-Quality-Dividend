@@ -39,11 +39,21 @@ namespace GoodQualityDividend.Services
 
             decimal _10YrGrowthRate = 0;
             decimal percentage10YrGrowthRate = 0;
+            int YearPrev = 0;
+            decimal DividendPrev = 0;
 
             foreach(var stock in stockCollection){
 
-                //TODO: Calculate 10 Yr Growth Rate
+                decimal growthRate = 0;
 
+                if(YearPrev > 0 && DividendPrev > 0) {
+                    growthRate = ((stock.Dividend - DividendPrev)/DividendPrev) * 100;
+                }
+                
+                YearPrev = stock.Year.Year;
+                DividendPrev = stock.Dividend;
+
+                _10YrGrowthRate += growthRate;
             }
             
             percentage10YrGrowthRate = _10YrGrowthRate/10;
@@ -59,15 +69,37 @@ namespace GoodQualityDividend.Services
         //Equal to 1 means its a stable company
         public decimal _5_10yrRatio(IList<IStock> stockCollection){
 
-            var _5YrGrowthRate = 0;
-            var _10YrGrowthRate = 0;
+            decimal _5YrGrowthRate = 0;
+            decimal _10YrGrowthRate = 0;
+            int YearPrev = 0;
+            decimal DividendPrev = 0;
+            int count = 0;
 
-            //TODO: Calculate 5/10 Ratio Growth Rate
+            foreach(var stock in stockCollection){
 
-            var _5_10YrGrowRate = _5YrGrowthRate/_10YrGrowthRate;
+                decimal growthRate = 0;
+
+                if(YearPrev > 0 && DividendPrev > 0) {
+                    growthRate = ((stock.Dividend - DividendPrev)/DividendPrev) * 100;
+                }
+
+                if(count <= 5){
+                    _5YrGrowthRate += growthRate;
+                }
+
+                _10YrGrowthRate += growthRate;
+
+                YearPrev = stock.Year.Year;
+                DividendPrev = stock.Dividend;
+
+            }
+
+            decimal _5_10YrGrowRate = _5YrGrowthRate/_10YrGrowthRate;
 
             return _5_10YrGrowRate;
         }
+        
+        //Get a sorted list of Good quality dividends by ascending order based on the criteria
         public async Task<IList<IDividendCriteria>> GoodQualityDividendList(){
 
             //WebAPI that gets Nigeria Stock Exchange market price, dividends and ...
