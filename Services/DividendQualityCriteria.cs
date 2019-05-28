@@ -114,6 +114,7 @@ namespace GoodQualityDividend.Services
 
             foreach(var cell in _stockCollection){
 
+                //Stock exchange WebAPI from Nigeria Stock Exchange Market for Stock 10 Years Stock History
                 var stockHistory = "" + cell.Company;
 
                 //Get Share Price History of 10 yr period of a specific company
@@ -140,6 +141,7 @@ namespace GoodQualityDividend.Services
 
             //TODO: Sorting ALgorithm for the four criteria. Based on the set condition
 
+            dividendCriteriaCollection.Sort();
 
             return dividendCriteriaCollection;
         } 
