@@ -22,7 +22,7 @@ namespace GoodQualityDividend.Services
 
                     for(int j = 0; j < dividendCriteriaCollection.Count; j++){
 
-                        if(dividendCriteriaCollection[j].PercentageYield > dividendCriteriaCollection[j+1].PercentageYield){
+                        if(dividendCriteriaCollection[j].PercentageYield < dividendCriteriaCollection[j+1].PercentageYield){
 
                             tempData = dividendCriteriaCollection[j+1].PercentageYield;
                             dividendCriteriaCollection[j+1].PercentageYield = dividendCriteriaCollection[j].PercentageYield;
@@ -33,7 +33,7 @@ namespace GoodQualityDividend.Services
                     }
                 }
             }
-            
+
             return dividendCriteriaCollection;
         }
 
