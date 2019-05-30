@@ -10,11 +10,11 @@ namespace GoodQualityDividend.Services
 {
     public class DividendQualityCriteria : IDividendQualityCriteria
     {
-        private readonly CriteriaSortingAlgorithm criteriaSort;
+        private readonly CriteriaSortingAlgorithm _criteriaSort;
 
         public DividendQualityCriteria(CriteriaSortingAlgorithm criteriaSort)
         {
-            this.criteriaSort = criteriaSort;
+            this._criteriaSort = criteriaSort;
         }
 
         //Percentage Yield is amount you get per share
@@ -150,10 +150,10 @@ namespace GoodQualityDividend.Services
  */
             //Sorting ALgorithm for the four criteria. Based on the set condition
             
-            var sortByPercentageYield = this.criteriaSort.SortByPercentageYield(stock);
-            var sortedByPercentagePayoutRatio = this.criteriaSort.SortByPercentagePayoutRatio(stock);
-            var sortedByPercentage10YrGrowthRate = this.criteriaSort.SortByPercentage10YrGrowthRate(stock);
-            var sortedByPercentage_5_10YrRate = this.criteriaSort.SortBy_5_10_YrGrowthRateRatio(stock);
+            var sortByPercentageYield = this._criteriaSort.SortByPercentageYield(stock);
+            var sortedByPercentagePayoutRatio = this._criteriaSort.SortByPercentagePayoutRatio(stock);
+            var sortedByPercentage10YrGrowthRate = this._criteriaSort.SortByPercentage10YrGrowthRate(stock);
+            var sortedByPercentage_5_10YrRate = this._criteriaSort.SortBy_5_10_YrGrowthRateRatio(stock);
 
             for(int i = 0; i < stock.Count; i++){
 

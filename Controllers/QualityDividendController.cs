@@ -22,7 +22,6 @@ namespace GoodQualityDividend.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-
             //Testing the sorting Algorithm
             var list = new List<IDividendCriteria>(){
 
