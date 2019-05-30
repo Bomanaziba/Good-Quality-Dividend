@@ -11,15 +11,11 @@ namespace GoodQualityDividend.Controllers
     [ApiController]
     public class QualityDividendController : Controller 
     {
-
         private readonly IDividendQualityCriteria _dividendQualtiyCriteria;
-        private readonly ICriteriaSortingAlgorithm criteriaSortingAlgorithm;
 
-        public QualityDividendController(IDividendQualityCriteria _dividendQualtiyCriteria,
-        ICriteriaSortingAlgorithm criteriaSortingAlgorithm)
+        public QualityDividendController(IDividendQualityCriteria _dividendQualtiyCriteria)
         {
             this._dividendQualtiyCriteria = _dividendQualtiyCriteria;
-            this.criteriaSortingAlgorithm = criteriaSortingAlgorithm;
         }
 
         // GET api/values
@@ -83,9 +79,7 @@ namespace GoodQualityDividend.Controllers
 
             };
             
-            //var goodQualityDividend = await this._dividendQualtiyCriteria.GoodQualityDividendList();
-
-            var model = this.criteriaSortingAlgorithm.SortByPercentageYield(list);
+            var model = this._dividendQualtiyCriteria.GoodQualityDividendList(list);
 
             return Ok(model);
         }

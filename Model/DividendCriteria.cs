@@ -12,6 +12,7 @@ namespace GoodQualityDividend.Model
         public decimal PercentagePayoutRatio { get; set; }
         public decimal Percentage10yrGrowthRate { get; set; }
         public decimal _5_10Ratio { get; set; }
+        public int Rating { get; set; }
         public DateTime Year { get; set; }
     }
 }

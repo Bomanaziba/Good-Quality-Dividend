@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GoodQualityDividend.Interfaces;
 using GoodQualityDividend.Model;
@@ -9,6 +10,13 @@ namespace GoodQualityDividend.Services
 {
     public class DividendQualityCriteria : IDividendQualityCriteria
     {
+        private readonly CriteriaSortingAlgorithm criteriaSort;
+
+        public DividendQualityCriteria(CriteriaSortingAlgorithm criteriaSort)
+        {
+            this.criteriaSort = criteriaSort;
+        }
+
         //Percentage Yield is amount you get per share
         //It should be greater than 4% 
         //But too high should raise a red flag
@@ -100,13 +108,13 @@ namespace GoodQualityDividend.Services
         }
         
         //Get a sorted list of Good quality dividends by ascending order based on the criteria
-        public async Task<IList<IDividendCriteria>> GoodQualityDividendList(){
+        public IList<IDividendCriteria> GoodQualityDividendList(IList<IDividendCriteria> stock){
 
             //WebAPI that gets Nigeria Stock Exchange market price, dividends and ...
-            string stockCollection = string.Empty;
+ /*           string stockCollection = string.Empty;
 
             var dividendCriteriaCollection = new List<IDividendCriteria>();
-
+ 
             var dividendCriteria = new DividendCriteria();
 
             //Get List of Share Price in the Nigeria stock exchange market 
@@ -124,6 +132,7 @@ namespace GoodQualityDividend.Services
                 dividendCriteria.PricePerStock = cell.PricePerShare;
                 dividendCriteria.Dividend = cell.Dividend;
                 dividendCriteria.Year = cell.Year;
+                dividendCriteria.Rating = 0;
                 
                 if(cell.Year.Year == DateTime.Now.Year) {
 
@@ -138,12 +147,53 @@ namespace GoodQualityDividend.Services
                 
                 dividendCriteriaCollection.Add(dividendCriteria);
             }
+ */
+            //Sorting ALgorithm for the four criteria. Based on the set condition
+            
+            var sortByPercentageYield = this.criteriaSort.SortByPercentageYield(stock);
+            var sortedByPercentagePayoutRatio = this.criteriaSort.SortByPercentagePayoutRatio(stock);
+            var sortedByPercentage10YrGrowthRate = this.criteriaSort.SortByPercentage10YrGrowthRate(stock);
+            var sortedByPercentage_5_10YrRate = this.criteriaSort.SortBy_5_10_YrGrowthRateRatio(stock);
 
-            //TODO: Sorting ALgorithm for the four criteria. Based on the set condition
+            for(int i = 0; i < stock.Count; i++){
 
-            dividendCriteriaCollection.Sort();
+                foreach(var cells in sortByPercentageYield){
+                    if(stock[i].Company == cells.Company) 
+                        //dividendCriteriaCollection[i].Rating++;
+                        stock[i].Rating++;
+                        break;
+                }   
 
-            return dividendCriteriaCollection;
+                foreach(var container in sortedByPercentagePayoutRatio){
+                    if(stock[i].Company == container.Company) 
+                        //dividendCriteriaCollection[i].Rating++;
+                        stock[i].Rating++;
+                        break;
+                }
+
+                foreach(var pocket in sortedByPercentage10YrGrowthRate){
+                    if(stock[i].Company == pocket.Company) 
+                        //dividendCriteriaCollection[i].Rating++;
+                        stock[i].Rating++;
+                        break;
+                }
+
+                foreach(var box in sortedByPercentage_5_10YrRate){
+                    if(stock[i].Company == box.Company) 
+                        //dividendCriteriaCollection[i].Rating++;
+                        stock[i].Rating++;
+                        break;
+                }
+
+            }
+
+            stock.OrderBy(p=>p.Rating);
+            
+            return stock;
+
+            //dividendCriteriaCollection.OrderBy(p=>p.Rating);
+
+            //return dividendCriteriaCollection;
         } 
     }
 }

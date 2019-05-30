@@ -12,6 +12,7 @@ namespace GoodQualityDividend.Interfaces
         decimal PercentagePayoutRatio { get; set; }
         decimal Percentage10yrGrowthRate { get; set; }
         decimal _5_10Ratio { get; set; }
+        int Rating { get; set; }
         DateTime Year { get; set; }
     }
 }
