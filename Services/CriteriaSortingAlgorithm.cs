@@ -5,11 +5,17 @@ using System;
 
 namespace GoodQualityDividend.Services
 {
-    public class CriteriaSortingAlgorithm : ICriteriaSortingAlgorithm
+    internal static class CriteriaSortingAlgorithms
     {
-        //Percentage Yield should be above 4%.
-        //That is it is sorted in descending order
-        public IList<IDividendCriteria> SortByPercentageYield(IList<IDividendCriteria> dividendCriteriaCollection)
+
+        /// <summary>
+        /// Sorts the by percentage yield.
+        /// Percentage Yield should be above 4%.
+        /// That is it is sorted in descending order
+        /// </summary>
+        /// <param name="dividendCriteriaCollection">The dividend criteria collection.</param>
+        /// <returns></returns>
+        internal static IEnumerable<IDividendCriteria> SortByPercentageYield(IList<IDividendCriteria> dividendCriteriaCollection)
         {
             //var sortByPercentageYield = new List<IDividendCriteria>();
             if(dividendCriteriaCollection != null && dividendCriteriaCollection.Count > 0){
@@ -33,8 +39,14 @@ namespace GoodQualityDividend.Services
             return dividendCriteriaCollection;
         }
 
-        //Percecntage Payout Ratio should be less than 70% 
-        public IList<IDividendCriteria> SortByPercentagePayoutRatio(IList<IDividendCriteria> dividendCriteriaCollection)
+
+        /// <summary>
+        /// Sorts the by percentage payout ratio.
+        /// Percecntage Payout Ratio should be less than 70%
+        /// </summary>
+        /// <param name="dividendCriteriaCollection">The dividend criteria collection.</param>
+        /// <returns></returns>
+        internal static IEnumerable<IDividendCriteria> SortByPercentagePayoutRatio(IList<IDividendCriteria> dividendCriteriaCollection)
         {
             //var sortByPercentageYield = new List<IDividendCriteria>();
             if(dividendCriteriaCollection != null && dividendCriteriaCollection.Count > 0){
@@ -56,10 +68,15 @@ namespace GoodQualityDividend.Services
             return dividendCriteriaCollection;
         }
 
-        //Percentage 10Yr Growth Rate is acceptable between 6% - 8%
-        //It is sorted in descending order
-        //for 
-        public IList<IDividendCriteria> SortByPercentage10YrGrowthRate(IList<IDividendCriteria> dividendCriteriaCollection){
+
+        /// <summary>
+        /// Sorts the by percentage10 yr growth rate.
+        /// Percentage 10Yr Growth Rate is acceptable between 6% - 8%
+        /// It is sorted in descending order
+        /// </summary>
+        /// <param name="dividendCriteriaCollection">The dividend criteria collection.</param>
+        /// <returns></returns>
+        internal static IEnumerable<IDividendCriteria> SortByPercentage10YrGrowthRate(IList<IDividendCriteria> dividendCriteriaCollection){
             //var sortByPercentageYield = new List<IDividendCriteria>();
             if(dividendCriteriaCollection != null && dividendCriteriaCollection.Count > 0){
 
@@ -82,10 +99,16 @@ namespace GoodQualityDividend.Services
             return dividendCriteriaCollection;
         }
 
-        //This ratio should be greater than or equal to 1
-        //Equal to 1 means its a stable company
-        //It is sort in descending order
-        public IList<IDividendCriteria> SortBy_5_10_YrGrowthRateRatio(IList<IDividendCriteria> dividendCriteriaCollection){
+
+        /// <summary>
+        /// Sorts the by 5 10 yr growth rate ratio.
+        /// This ratio should be greater than or equal to 1
+        /// Equal to 1 means its a stable company
+        /// It is sort in descending order
+        /// </summary>
+        /// <param name="dividendCriteriaCollection">The dividend criteria collection.</param>
+        /// <returns></returns>
+        internal static IEnumerable<IDividendCriteria> SortBy_5_10_YrGrowthRateRatio(IList<IDividendCriteria> dividendCriteriaCollection){
             //var sortByPercentageYield = new List<IDividendCriteria>();
             if(dividendCriteriaCollection != null && dividendCriteriaCollection.Count > 0){
 
@@ -107,7 +130,6 @@ namespace GoodQualityDividend.Services
 
             return dividendCriteriaCollection;
         }
-
-        
+  
     }
 }

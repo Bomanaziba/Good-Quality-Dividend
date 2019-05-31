@@ -4,7 +4,6 @@ namespace GoodQualityDividend.Interfaces
 {
     public interface IDividendCriteria
     {
-         
         string Company { get; set; }
         decimal Dividend { get; set; }
         decimal PricePerStock { get; set; }

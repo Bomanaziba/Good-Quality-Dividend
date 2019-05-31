@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace GoodQualityDividend.Interfaces
 {
-    public interface ICriteriaSortingAlgorithm
+    public interface ICriteriaSortingAlgorithms
     {
          IList<IDividendCriteria> SortByPercentageYield(IList<IDividendCriteria> dividendCriteriaCollection);
          IList<IDividendCriteria> SortByPercentagePayoutRatio(IList<IDividendCriteria> dividendCriteriaCollection);

@@ -32,7 +32,6 @@ namespace GoodQualityDividend
             services.AddScoped<IStock, Stock>();
             services.AddScoped<IDividendCriteria, DividendCriteria>();
             services.AddScoped<IDividendQualityCriteria, DividendQualityCriteria>();
-            services.AddScoped<ICriteriaSortingAlgorithm, CriteriaSortingAlgorithm>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
