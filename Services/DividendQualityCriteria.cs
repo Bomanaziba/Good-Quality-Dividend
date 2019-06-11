@@ -7,6 +7,7 @@ using GoodQualityDividend.Model;
 using Newtonsoft.Json;
 
 namespace GoodQualityDividend.Services {
+
     public class DividendQualityCriteria : IDividendQualityCriteria {
 
         /// <summary>
@@ -19,7 +20,7 @@ namespace GoodQualityDividend.Services {
         /// <returns></returns>
         public decimal PercentageYield (IStock stock) {
 
-            decimal percentageYield = stock.Dividend / stock.PricePerShare;
+            decimal percentageYield = stock.Amount / stock.Close;
 
             return percentageYield;
         }
@@ -35,9 +36,10 @@ namespace GoodQualityDividend.Services {
         public decimal PercentagePayoutRatio (IStock stock) {
 
             //Needed some more work as Annual Revenue and Outstanding number of shares may not be available in the WebAPI 
-            var EarningsPerShare = stock.AnnualRevenue / stock.OutStandingNumberOfShares;
+            var EarningsPerShare = stock.EPS;
+            var Dividend = stock.Amount;
 
-            var payOutRatio = stock.Dividend / EarningsPerShare;
+            var payOutRatio = Dividend / EarningsPerShare;
 
             return payOutRatio;
         }
@@ -63,11 +65,11 @@ namespace GoodQualityDividend.Services {
                 decimal growthRate = 0;
 
                 if (YearPrev > 0 && DividendPrev > 0) {
-                    growthRate = ((stock.Dividend - DividendPrev) / DividendPrev) * 100;
+                    growthRate = ((stock.Amount - DividendPrev) / DividendPrev) * 100;
                 }
 
                 YearPrev = stock.Year.Year;
-                DividendPrev = stock.Dividend;
+                DividendPrev = stock.Amount;
 
                 _10YrGrowthRate += growthRate;
             }
@@ -101,7 +103,7 @@ namespace GoodQualityDividend.Services {
                 decimal growthRate = 0;
 
                 if (YearPrev > 0 && DividendPrev > 0) {
-                    growthRate = ((stock.Dividend - DividendPrev) / DividendPrev) * 100;
+                    growthRate = ((stock.Amount - DividendPrev) / DividendPrev) * 100;
                 }
 
                 if (count <= 5) {
@@ -111,7 +113,7 @@ namespace GoodQualityDividend.Services {
                 _10YrGrowthRate += growthRate;
 
                 YearPrev = stock.Year.Year;
-                DividendPrev = stock.Dividend;
+                DividendPrev = stock.Amount;
 
             }
 
@@ -139,15 +141,16 @@ namespace GoodQualityDividend.Services {
             var _stockCollection = JsonConvert.DeserializeObject<IStock[]> (stockCollection);
 
             foreach (var cell in _stockCollection) {
+                
                 //Stock exchange WebAPI from Nigeria Stock Exchange Market for Stock 10 Years Stock History
-                var stockHistory = "" + cell.Company;
+                var stockHistory = "" + cell.Symbol;
 
                 //Get Share Price History of 10 yr period of a specific company
                 var _stockHistory = JsonConvert.DeserializeObject<IStock[]> (stockHistory);
 
-                dividendCriteria.Company = cell.Company;
-                dividendCriteria.PricePerStock = cell.PricePerShare;
-                dividendCriteria.Dividend = cell.Dividend;
+                dividendCriteria.Company = cell.Symbol;
+                dividendCriteria.PricePerStock = cell.Close;
+                dividendCriteria.Dividend = cell.Amount;
                 dividendCriteria.Year = cell.Year;
                 dividendCriteria.Rating = 0;
 
@@ -168,6 +171,40 @@ namespace GoodQualityDividend.Services {
             int rating = 0;
 
             foreach (var cell in dividendCriteriaCollection) {
+                rating = dividendCriteriaCollection.Count;
+
+                if (cell.PercentageYield >= 4) {
+                    cell.Rating += rating;
+                }
+
+                if (cell.PercentagePayoutRatio < 70) {
+                    cell.Rating += rating;
+                }
+
+                if (cell.Percentage10yrGrowthRate >= 6 && cell.Percentage10yrGrowthRate <= 8) {
+                    cell.Rating += rating;
+                } else if (cell.Percentage10yrGrowthRate > 8) {
+                    cell.Rating += rating / 2;
+                }
+
+                if (cell._5_10Ratio > 1) {
+                    cell.Rating += rating;
+                }
+
+            }
+
+            var result = dividendCriteriaCollection.OrderByDescending (p => p.Rating).ToList ();
+
+            return result;
+        }
+
+        //Test Method
+        public IList<IDividendCriteria> GoodQualityDividendList (IList<IDividendCriteria> dividendCriteriaCollection) {
+
+            int rating = 0;
+
+            foreach (var cell in dividendCriteriaCollection) {
+
                 rating = dividendCriteriaCollection.Count;
 
                 if (cell.PercentageYield >= 4) {

@@ -1,0 +1,414 @@
+	
+0	
+Symbol	"LEARNAFRCA"
+CSI	"LEARNAFRCA"
+Last	0.76
+Change	0.03
+PerChange	4.11
+Asset	"EQUITY"
+1	
+Symbol	"AIICO"
+CSI	"AIICO"
+Last	0.61
+Change	-0.02
+PerChange	-3.17
+Asset	"EQUITY"
+2	
+Symbol	"GUARANTY"
+CSI	"GUARANTY"
+Last	24.38
+Change	0
+PerChange	0
+Asset	"EQUITY"
+3	
+Symbol	"OMATEK"
+CSI	"OMATEK [MRF]"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+4	
+Symbol	"WAPIC"
+CSI	"WAPIC"
+Last	0.5
+Change	0
+PerChange	4
+Asset	"EQUITY"
+5	
+Symbol	"CAVERTON"
+CSI	"CAVERTON [BLS]"
+Last	1.1
+Change	0
+PerChange	-9.09
+Asset	"EQUITY"
+6	
+Symbol	"ACCESS"
+CSI	"ACCESS"
+Last	5.75
+Change	0.1
+PerChange	1.77
+Asset	"EQUITY"
+7	
+Symbol	"OKOMUOIL"
+CSI	"OKOMUOIL"
+Last	47.04
+Change	0
+PerChange	0
+Asset	"EQUITY"
+8	
+Symbol	"UNITYBNK"
+CSI	"UNITYBNK"
+Last	0.67
+Change	0.01
+PerChange	1.52
+Asset	"EQUITY"
+9	
+Symbol	"NASCON"
+CSI	"NASCON"
+Last	7.8
+Change	0
+PerChange	0
+Asset	"EQUITY"
+10	
+Symbol	"NPFMCRFBK"
+CSI	"NPFMCRFBK"
+Last	1.04
+Change	0
+PerChange	0
+Asset	"EQUITY"
+11	
+Symbol	"FBNH"
+CSI	"FBNH"
+Last	3.01
+Change	-0.09
+PerChange	-2.9
+Asset	"EQUITY"
+12	
+Symbol	"UBA"
+CSI	"UBA"
+Last	4.25
+Change	0
+PerChange	0.24
+Asset	"EQUITY"
+13	
+Symbol	"UBN"
+CSI	"UBN [BLS]"
+Last	4.51
+Change	0.21
+PerChange	4.88
+Asset	"EQUITY"
+14	
+Symbol	"CAP"
+CSI	"CAP"
+Last	33.75
+Change	0
+PerChange	0
+Asset	"EQUITY"
+15	
+Symbol	"DUNLOP"
+CSI	"DUNLOP [DIP]"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+16	
+Symbol	"GUINNESS"
+CSI	"GUINNESS"
+Last	82.01
+Change	2.01
+PerChange	2.51
+Asset	"EQUITY"
+17	
+Symbol	"WAPCO"
+CSI	"WAPCO"
+Last	47.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+18	
+Symbol	"TOTAL"
+CSI	"TOTAL"
+Last	350
+Change	0
+PerChange	0
+Asset	"EQUITY"
+19	
+Symbol	"AFRIPRUD"
+CSI	"AFRIPRUD"
+Last	2.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+20	
+Symbol	"NB"
+CSI	"NB"
+Last	146
+Change	-0.01
+PerChange	-0.01
+Asset	"EQUITY"
+21	
+Symbol	"DANGSUGAR"
+CSI	"DANGSUGAR"
+Last	6.2
+Change	0
+PerChange	0
+Asset	"EQUITY"
+22	
+Symbol	"STDINSURE"
+CSI	"STDINSURE"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+23	
+Symbol	"MTI"
+CSI	"MTI [DIP]"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+24	
+Symbol	"PZ"
+CSI	"PZ"
+Last	18.29
+Change	0
+PerChange	0
+Asset	"EQUITY"
+25	
+Symbol	"HMARKINS"
+CSI	"HMARKINS"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+26	
+Symbol	"DANGCEM"
+CSI	"DANGCEM"
+Last	181.99
+Change	0
+PerChange	0
+Asset	"EQUITY"
+27	
+Symbol	"FLOURMILL"
+CSI	"FLOURMILL"
+Last	19.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+28	
+Symbol	"LASACO"
+CSI	"LASACO"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+29	
+Symbol	"MOBIL"
+CSI	"MOBIL"
+Last	180.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+30	
+Symbol	"CONTINSURE"
+CSI	"CONTINSURE"
+Last	1.1
+Change	0.01
+PerChange	0.92
+Asset	"EQUITY"
+31	
+Symbol	"STERLNBANK"
+CSI	"STERLNBANK"
+Last	0.82
+Change	-0.04
+PerChange	-4.65
+Asset	"EQUITY"
+32	
+Symbol	"FCMB"
+CSI	"FCMB"
+Last	1.08
+Change	0.02
+PerChange	1.89
+Asset	"EQUITY"
+33	
+Symbol	"ETERNA"
+CSI	"ETERNA"
+Last	3
+Change	0
+PerChange	0
+Asset	"EQUITY"
+34	
+Symbol	"DIAMONDBNK"
+CSI	"DIAMONDBNK"
+Last	1.04
+Change	0
+PerChange	-0.96
+Asset	"EQUITY"
+35	
+Symbol	"LOTUSHAL15"
+CSI	"LOTUSHAL15"
+Last	8.92
+Change	0
+PerChange	0
+Asset	"ETF"
+36	
+Symbol	"TRANSCORP"
+CSI	"TRANSCORP"
+Last	0.9
+Change	0.03
+PerChange	3.45
+Asset	"EQUITY"
+37	
+Symbol	"INTBREW"
+CSI	"INTBREW"
+Last	19.95
+Change	0
+PerChange	0
+Asset	"EQUITY"
+38	
+Symbol	"UAC-PROP"
+CSI	"UAC-PROP"
+Last	3.09
+Change	-0.16
+PerChange	-4.92
+Asset	"EQUITY"
+39	
+Symbol	"NEIMETH"
+CSI	"NEIMETH"
+Last	0.9
+Change	0
+PerChange	0
+Asset	"EQUITY"
+40	
+Symbol	"CCNN"
+CSI	"CCNN"
+Last	4.97
+Change	0
+PerChange	0
+Asset	"EQUITY"
+41	
+Symbol	"MANSARD"
+CSI	"MANSARD"
+Last	1.99
+Change	0
+PerChange	0
+Asset	"EQUITY"
+42	
+Symbol	"UNIC"
+CSI	"UNIC [MRS]"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+43	
+Symbol	"CHAMS"
+CSI	"CHAMS"
+Last	0.5
+Change	0
+PerChange	0
+Asset	"EQUITY"
+44	
+Symbol	"DANGFLOUR"
+CSI	"DANGFLOUR"
+Last	4
+Change	0
+PerChange	0
+Asset	"EQUITY"
+45	
+Symbol	"CHAMPION"
+CSI	"CHAMPION"
+Last	2.7
+Change	0.24
+PerChange	9.76
+Asset	"EQUITY"
+46	
+Symbol	"UCAP"
+CSI	"UCAP"
+Last	2.5
+Change	0
+PerChange	-0.8
+Asset	"EQUITY"
+47	
+Symbol	"STANBICETF30"
+CSI	"STANBICETF30"
+Last	78.19
+Change	0
+PerChange	0
+Asset	"ETF"
+48	
+Symbol	"HONYFLOUR"
+CSI	"HONYFLOUR"
+Last	1.14
+Change	-0.05
+PerChange	-4.2
+Asset	"EQUITY"
+49	
+Symbol	"WEMABANK"
+CSI	"WEMABANK"
+Last	0.58
+Change	0
+PerChange	0
+Asset	"EQUITY"
+50	
+Symbol	"UPL"
+CSI	"UPL"
+Last	4.3
+Change	-0.06
+PerChange	-1.38
+Asset	"EQUITY"
+51	
+Symbol	"AIRSERVICE"
+CSI	"AIRSERVICE"
+Last	2.31
+Change	0.11
+PerChange	5
+Asset	"EQUITY"
+52	
+Symbol	"OANDO"
+CSI	"OANDO"
+Last	4.5
+Change	-0.2
+PerChange	-4.26
+Asset	"EQUITY"
+53	
+Symbol	"ZENITHBANK"
+CSI	"ZENITHBANK"
+Last	14.9
+Change	0.09
+PerChange	0.61
+Asset	"EQUITY"
+54	
+Symbol	"SKYEBANK"
+CSI	"SKYEBANK [AWR]"
+Last	0.6
+Change	0
+PerChange	0
+Asset	"EQUITY"
+55	
+Symbol	"FIDELITYBK"
+CSI	"FIDELITYBK"
+Last	0.9
+Change	0
+PerChange	0
+Asset	"EQUITY"
+56	
+Symbol	"BOCGAS"
+CSI	"BOCGAS"
+Last	3.35
+Change	0
+PerChange	0
+Asset	"EQUITY"
+57	
+Symbol	"UACN"
+CSI	"UACN"
+Last	19.2
+Change	-0.35
+PerChange	-1.79
+Asset	"EQUITY"
+58	
+Symbol	"REDSTAREX"
+CSI	"REDSTAREX"
+Last	4.2
+Change	0.2
+PerChange	5
+Asset	"EQUITY"

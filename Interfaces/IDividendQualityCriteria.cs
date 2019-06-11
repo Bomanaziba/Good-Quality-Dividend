@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace GoodQualityDividend.Interfaces
 {
@@ -10,5 +9,6 @@ namespace GoodQualityDividend.Interfaces
          decimal Percentage10yrGrowthRate(IList<IStock> stockCollection);
          decimal _5_10yrRatio(IList<IStock> stockCollection);
          IList<IDividendCriteria> GoodQualityDividendList();
+         IList<IDividendCriteria> GoodQualityDividendList (IList<IDividendCriteria> dividendCriteriaCollection);
     }
 }

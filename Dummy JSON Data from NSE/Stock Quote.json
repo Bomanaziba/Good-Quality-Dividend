@@ -1,0 +1,27 @@
+	
+0	
+Symbol	"FBNH"
+CSI	"FBNH"
+Currency	"NGN"
+Last	3.1
+LastTradeTime	"2016-11-01T14:28:27.987"
+Ask	3.09
+Bid	3.01
+AskSize	null
+BidSize	null
+PrevClose	3
+PrevCloseDate	"2016-11-02T00:00:00"
+Change	0.1
+PerChange	3.33
+Open	2.99
+High	3.1
+Low	2.99
+Close	3.1
+EPS	0.207492
+PE	14.940335049062131
+Volume	9598442
+High52Week	5.62
+Low52Week	2.95
+MktCap	111275407655.2
+TradeDate	"2016-11-01T00:00:00"
+Asset	"EQUITY"

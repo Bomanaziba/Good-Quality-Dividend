@@ -4,11 +4,12 @@ namespace GoodQualityDividend.Interfaces
 {
     public interface IStock
     {
-        string Company { get; set; }
-        decimal Dividend { get; set; }
-        decimal PricePerShare { get; set; }
-        decimal AnnualRevenue { get; set; }
-        decimal OutStandingNumberOfShares { get; set;}
+        string Symbol { get; set; }
+        string Currency { get; set; } 
+        decimal Amount { get; set; }
+        decimal Close { get; set; }
+        decimal EPS { get; set; }
+        string Asset { get; set; }
         DateTime Year { get; set; }
     }
 }

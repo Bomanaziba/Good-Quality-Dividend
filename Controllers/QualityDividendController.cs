@@ -18,6 +18,7 @@ namespace GoodQualityDividend.Controllers {
         // GET api/values
         [HttpGet]
         public ActionResult Get () {
+            
             //Testing Data  Algorithm
             var list = new List<IDividendCriteria> () {
 
@@ -74,9 +75,12 @@ namespace GoodQualityDividend.Controllers {
 
             };
 
-            var model = this._dividendQualtiyCriteria.GoodQualityDividendList();
+            //var model = this._dividendQualtiyCriteria.GoodQualityDividendList();
 
-            return Ok (model);
+            //Test for method
+            var testData = this._dividendQualtiyCriteria.GoodQualityDividendList(list);
+
+            return Ok (testData);
         }
     }
 }
