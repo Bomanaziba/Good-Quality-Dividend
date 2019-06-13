@@ -128,7 +128,7 @@ namespace GoodQualityDividend.Services {
         /// </summary>
         /// <param name="stock">The stock.</param>
         /// <returns></returns>
-        public IList<IDividendCriteria> GoodQualityDividendList () {
+        public async Task<IList<IDividendCriteria>> GoodQualityDividendList () {
 
             //WebAPI that gets Nigeria Stock Exchange market price, dividends and ...
             string stockCollection = string.Empty;
@@ -193,13 +193,13 @@ namespace GoodQualityDividend.Services {
 
             }
 
-            var result = dividendCriteriaCollection.OrderByDescending (p => p.Rating).ToList ();
+            var result = await dividendCriteriaCollection.OrderByDescending (p => p.Rating).ToAsyncEnumerable().ToList();
 
             return result;
         }
 
         //Test Method
-        public IList<IDividendCriteria> GoodQualityDividendList (IList<IDividendCriteria> dividendCriteriaCollection) {
+        public async Task<IList<IDividendCriteria>> GoodQualityDividendList (IList<IDividendCriteria> dividendCriteriaCollection) {
 
             int rating = 0;
 
@@ -227,7 +227,7 @@ namespace GoodQualityDividend.Services {
 
             }
 
-            var result = dividendCriteriaCollection.OrderByDescending (p => p.Rating).ToList ();
+            var result = await dividendCriteriaCollection.OrderByDescending(p => p.Rating).ToAsyncEnumerable().ToList();
 
             return result;
         }

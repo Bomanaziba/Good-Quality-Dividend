@@ -17,7 +17,7 @@ namespace GoodQualityDividend.Controllers {
 
         // GET api/values
         [HttpGet]
-        public ActionResult Get () {
+        public async Task<IActionResult> Get () {
             
             //Testing Data  Algorithm
             var list = new List<IDividendCriteria> () {
@@ -78,7 +78,7 @@ namespace GoodQualityDividend.Controllers {
             //var model = this._dividendQualtiyCriteria.GoodQualityDividendList();
 
             //Test for method
-            var testData = this._dividendQualtiyCriteria.GoodQualityDividendList(list);
+            var testData = await this._dividendQualtiyCriteria.GoodQualityDividendList(list);
 
             return Ok (testData);
         }
